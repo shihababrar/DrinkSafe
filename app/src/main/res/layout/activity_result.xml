@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/sunrisee"
+    android:orientation="vertical"
+    tools:context=".Result">
+
+    <TextView
+        android:id="@+id/textViewColorCodesArsenicEnglishTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:textColor="#000"
+        android:text="Arsenic in water information/ আর্সেনিক পানি সংক্রান্ত তথ্য"
+        android:textSize="22dp"
+        />
+
+    <TextView
+        android:id="@+id/textViewColorCodesArsenicEnglish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewColorCodesArsenicEnglishTitle"
+        android:paddingLeft="10dp"
+        android:paddingTop="22dp"
+        android:textColor="#000"
+        android:text="hello1"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        />
+    <TextView
+        android:id="@+id/textViewColorCodesArsenicBangla"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="10dp"
+        android:layout_below="@+id/textViewColorCodesArsenicEnglish"
+        android:textColor="#000"
+        android:text="hello2"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        />
+    <TextView
+        android:id="@+id/textViewColorCodesIronEnglishTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingTop="22dp"
+        android:layout_below="@id/textViewColorCodesArsenicBangla"
+        android:textColor="#000"
+        android:text="Iron in water information/লোহার পানি সংক্রান্ত তথ্য "
+        android:textSize="22dp"
+        />
+    <TextView
+        android:id="@+id/textViewColorCodesIronEnglish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingTop="30dp"
+        android:textColor="#000"
+        android:text="hello3"
+        android:layout_below="@+id/textViewColorCodesIronEnglishTitle"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        />
+    <TextView
+        android:id="@+id/textViewColorCodesIronBangla"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="10dp"
+        android:textColor="#000"
+        android:text="hello4"
+        android:layout_below="@id/textViewColorCodesIronEnglish"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        />
+    <Button
+        android:id="@+id/idButtonShowTips"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Show Tips"
+        android:layout_marginTop="500dp"
+        android:layout_marginLeft="60dp"
+        android:textColor="#000"
+        android:background="#F37335"
+        />
+
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
