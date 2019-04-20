@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Drink Safe</string>
+    <string name="app_name">Safe Drink</string>
     <string name="gps_network_not_enabled" />
     <string name="open_location_settings" />
     <string name="Cancel" />

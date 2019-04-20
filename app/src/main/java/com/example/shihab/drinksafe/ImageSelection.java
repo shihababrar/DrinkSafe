@@ -28,6 +28,8 @@ import android.widget.Toast;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
+import static android.content.Context.LOCATION_SERVICE;
+
 public class ImageSelection extends AppCompatActivity implements View.OnClickListener{
     ImageView ivImageSelect;
     private static final int PICK_IMAGE = 1 ;

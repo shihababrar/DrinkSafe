@@ -35,43 +35,52 @@ public class Result extends AppCompatActivity implements View.OnClickListener {
     private GpsTracker gpsTracker;
     private int a,r,g,b;
     private String mydate;
-    private String densityLevel;
-    private final String url = "http://safedrinktk.000webhostapp.com/safedrink/insert.php";
+    private String densityLevel, ppmLevel;
+    //private final String url = "http://safedrinktk.000webhostapp.com/safedrink/insert.php";
+    //private final String url = "https://httpdrinksafe498tk.000webhostapp.com/files/insert.php";
+    private final String url = "https://jachaibd.com/files/insert.php";
 
-    public static final int redHigh0 = 149;
-    public static final int greenHigh0 = 115;
-    public static final int blueHigh0 = 45;
-    public static final int redLow0 = 129;
-    public static final int greenLow0 = 91;
-    public static final int blueLow0 = 23;
+    public static final int redHigh0 = 145;
+    public static final int greenHigh0 = 148;
+    public static final int blueHigh0 = 146;
+    public static final int redLow0 = 100;
+    public static final int greenLow0 = 101;
+    public static final int blueLow0 = 93;
 
-    public static final int redHigh50 = 213;
-    public static final int greenHigh50 = 135;
-    public static final int blueHigh50 = 43;
-    public static final int redLow50 = 183;
-    public static final int greenLow50 = 93;
-    public static final int blueLow50 = 9;
+    public static final int redHigh2 = 134;
+    public static final int greenHigh2 = 115;
+    public static final int blueHigh2 = 92;
+    public static final int redLow2 = 123;
+    public static final int greenLow2 = 96;
+    public static final int blueLow2 = 76;
 
-    public static final int redHigh125 = 143;
-    public static final int greenHigh125 = 83;
-    public static final int blueHigh125 = 23;
-    public static final int redLow125 = 121;
-    public static final int greenLow125 = 63;
-    public static final int blueLow125 = 9;
+    public static final int redHigh4 = 117;
+    public static final int greenHigh4 = 86;
+    public static final int blueHigh4 = 66;
+    public static final int redLow4 = 99;
+    public static final int greenLow4 = 57;
+    public static final int blueLow4 = 38;
 
-    public static final int redHigh250 = 199;
-    public static final int greenHigh250 = 147;
-    public static final int blueHigh250 = 97;
-    public static final int redLow250 = 115;
-    public static final int greenLow250 = 97;
-    public static final int blueLow250 = 59;
+    public static final int redHigh6 = 0;
+    public static final int greenHigh6 = 0;
+    public static final int blueHigh6 = 0;
+    public static final int redLow6 = 0;
+    public static final int greenLow6 = 0;
+    public static final int blueLow6 = 0;
 
-    public static final int redHigh500 = 155;
-    public static final int greenHigh500 = 97;
-    public static final int blueHigh500 = 69;
-    public static final int redLow500 = 93;
-    public static final int greenLow500 = 33;
-    public static final int blueLow500 = 17;
+    public static final int redHigh8 = 151;
+    public static final int greenHigh8 = 111;
+    public static final int blueHigh8 = 59;
+    public static final int redLow8 = 127;
+    public static final int greenLow8 = 73;
+    public static final int blueLow8 = 24;
+
+    public static final int redHigh10 = 155;
+    public static final int greenHigh10 = 88;
+    public static final int blueHigh10 = 29;
+    public static final int redLow10 = 102;
+    public static final int greenLow10 = 60;
+    public static final int blueLow10 = 15;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -155,52 +164,70 @@ public class Result extends AppCompatActivity implements View.OnClickListener {
         }
     }
 
+
+
     private void analyzeResultIron() {
         if( (r>=redLow0 && r<=redHigh0) && (g>=greenLow0 && g<=greenHigh0) && (b>=blueLow0 && b<=blueHigh0))
         {
-           tvIronEnglish.setText ("0 ppm, Soft level iron detected! ");
-           tvIronBangla.setText("0 পিপিএম, নরম স্তর লোহা সনাক্ত!");
+            tvIronEnglish.setText ("0 ppm, Soft level iron detected! ");
+            tvIronBangla.setText("0 পিপিএম, নরম স্তর লোহা সনাক্ত!");
+            ppmLevel = String.valueOf(0.0);
         }
 
 
-///////////////////50 ppm soft////////////
-        else if( (r>=redLow50 && r<=redHigh50) && (g>=greenLow50 && g<=greenHigh50) && (b>=blueLow50 && b<=blueHigh50) )
+        /////////////////// 2.0 ppm soft////////////
+        else if( (r>=redLow2 && r<=redHigh2) && (g>=greenLow2 && g<=greenHigh2) && (b>=blueLow2 && b<=blueHigh2) )
         {
 
-            tvIronEnglish.setText("50 ppm, Soft Level iron detected!!");
-            tvIronBangla.setText(" ৫০ পিপিএম, নরম স্তর লোহা সনাক্ত!");
+            tvIronEnglish.setText("2.0 ppm, Soft Level iron detected!!");
+            tvIronBangla.setText("২.০ পিপিএম, নরম স্তর লোহা সনাক্ত !!");
+            ppmLevel = String.valueOf(2.0);
         }
 
 
 
-///////////////////125 ppm soft////////////
-        else if( (r>=redLow125 && r<=redHigh125)&& (g>=greenLow125 && g<=greenHigh125) && (b>=blueLow125 && b<=blueHigh125))
+        /////////////////// 4.0 ppm soft////////////
+        else if( (r>=redLow4 && r<=redHigh4)&& (g>=greenLow4 && g<=greenHigh4) && (b>=blueLow4 && b<=blueHigh4))
         {
-            tvIronEnglish.setText("125 ppm / mid-hard level iron ");
-            tvIronBangla.setText("১২৫  পিপিএম / মধ্য-কঠিন স্তর লোহা \"");
+            tvIronEnglish.setText("4.0 ppm / mid-hard level iron ");
+            tvIronBangla.setText("৪.০  পিপিএম / মধ্য-কঠিন স্তর লোহা \"");
+            ppmLevel = String.valueOf(4.0);
         }
 
 
-///////////////////250 ppm soft////////////
-        else if( (r>=redLow250 && r<=redHigh250) && (g>=greenLow250 && g<=greenHigh250) && (b>=blueLow250 && b<=blueHigh250))
+        /////////////////// 6.0 ppm mid-hard////////////
+        else if( (r>=redLow6 && r<=redHigh6) && (g>=greenLow6 && g<=greenHigh6) && (b>=blueLow6 && b<=blueHigh6))
         {
-            tvIronEnglish.setText("250 ppm / hard level iron ");
-            tvIronBangla.setText("২৫০  পিপিএম / কঠিন স্তর লোহা সনাক্ত!");
+            tvIronEnglish.setText("6.0 ppm / hard level iron ");
+            tvIronBangla.setText("৬.০  পিপিএম / কঠিন স্তর লোহা সনাক্ত!");
+            ppmLevel = String.valueOf(6.0);
         }
 
-///////////////////500 ppm soft////////////
-        else if( (r>=redLow500 && r<=redHigh500) && (g>=greenLow500 && g<=greenHigh500) && (b>=blueLow500 && b<=blueHigh500))
+        //// 8.0 hard ppm
+        else if( (r>=redLow8 && r<=redHigh8) && (g>=greenLow8 && g<=greenHigh8) && (b>=blueLow8 && b<=blueHigh8))
         {
-            tvIronEnglish.setText("500 ppm / Very hard level iron ");
-            tvIronBangla.setText("৫০০ পিপিএম / খুবই কঠিন স্তর লোহা সনাক্ত!");
+            tvIronEnglish.setText("8.0 ppm / hard level iron ");
+            tvIronBangla.setText("৮.০ পিপিএম / কঠিন স্তর লোহা সনাক্ত!");
+            ppmLevel = String.valueOf(8.0);
+        }
+
+
+
+        /////////////////// 10.0 ppm hard////////////
+        else if( (r>=redLow10 && r<=redHigh10) && (g>=greenLow10 && g<=greenHigh10) && (b>=blueLow10 && b<=blueHigh10))
+        {
+            tvIronEnglish.setText("10.0 ppm / Very hard level iron ");
+            tvIronBangla.setText("১০.০ পিপিএম / খুবই কঠিন স্তর লোহা সনাক্ত!");
+            ppmLevel = String.valueOf(10.0);
         }
         else {
             tvIronEnglish.setText("IronLevel: RGB value doesn't match with any Color Code of iron");
             tvIronBangla.setText("লোহা স্তর: আরজিবি মূল্য লোহার কোন রঙ কোডের সাথে মেলে না");
 
         }
-
     }
+
+
     private void getLocation() {
         gpsTracker = new GpsTracker(Result.this);
         if(gpsTracker.canGetLocation()){
@@ -216,6 +243,7 @@ public class Result extends AppCompatActivity implements View.OnClickListener {
         StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
+                Toast.makeText(Result.this, "Data Send!", Toast.LENGTH_LONG).show();
 
             }
         }, new Response.ErrorListener() {
@@ -233,6 +261,7 @@ public class Result extends AppCompatActivity implements View.OnClickListener {
                 params.put("address",address);
                 params.put("mydate",mydate);
                 params.put("densityLevel",densityLevel);
+                params.put("ppmLevel",ppmLevel);
                 return params;
             }
         };
